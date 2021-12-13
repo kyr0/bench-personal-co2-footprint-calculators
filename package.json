@@ -1,0 +1,15 @@
+{
+  "name": "bench-personal-co2-footprint-calculators",
+  "version": "1.0.0",
+  "description": "Benchmark analysis of personal (carbon) footprint calculators",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Aron Homberg <info@aron-homberg.de>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
