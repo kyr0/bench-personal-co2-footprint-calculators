@@ -518,15 +518,15 @@ const syncGraphSizeWithTableSize = () => {
         }
     })
 
-    graphEl.style.width = tableEl.clientWidth
-    graphEl.style.height = tableEl.clientHeight
+    graphEl.style.width = `${tableEl.clientWidth}px`
+    graphEl.style.height = `${tableEl.clientHeight}px`
 
     let svgWidth = graphEl.style.width.split('px')[0];
     let svgHeight = graphEl.style.height.split('px')[0];
 
-    graphEl.setAttributeNS(null, 'viewBox', `0 0 ${svgWidth} ${svgHeight}`)
-    graphEl.setAttributeNS(null, 'width', svgWidth)
-    graphEl.setAttributeNS(null, 'height', svgHeight)
+    graphEl.setAttributeNS(null, 'viewBox', `0 0 ${svgWidth || 0} ${svgHeight || 0}`)
+    graphEl.setAttributeNS(null, 'width', svgWidth || 0)
+    graphEl.setAttributeNS(null, 'height', svgHeight || 0)
 }
 
 const resetFilter = () => {
